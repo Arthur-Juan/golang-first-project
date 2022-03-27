@@ -12,8 +12,8 @@ func main() {
 
 	router := mux.NewRouter()
 
-	router.HandleFunc("/users", server.CreateUser).Methods("POST")
-	router.HandleFunc("/users", server.SearchUsers).Methods("GET")
+	router.HandleFunc("/users/", server.CreateUser).Methods("POST")
+	router.HandleFunc("/users/", server.SearchUsers).Methods("GET")
 	router.HandleFunc("/users/{id}", server.SearchUser).Methods("GET")
 	router.HandleFunc("/users/{id}", server.UpdateUser).Methods("PUT")
 	router.HandleFunc("/users/{id}", server.DeleteUser).Methods("DELETE")
